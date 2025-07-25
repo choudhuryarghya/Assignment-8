@@ -165,7 +165,6 @@ display(spark.sql("SELECT * FROM revenue_cab_drivers_external LIMIT 5"))
 Additional Analysis (Specific to Kaggle Dataset)
 Since this is a revenue-focused dataset, let's add some additional revenue-specific analysis:
 
-python
 # 1. Revenue distribution by hour of day
 if "pickup_datetime" in df.columns:
     revenue_by_hour = df.withColumn("pickup_hour", hour(col("pickup_datetime"))) \
